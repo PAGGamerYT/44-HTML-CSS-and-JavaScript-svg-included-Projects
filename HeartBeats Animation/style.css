@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    transition: all 0.5s;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    width: 100vw;
+    background: #0e171e;
+    height: 100vh;
+}
+
+svg {
+    width: 600px;
+    height: 200px;
+}
+
+#blur,
+#main {
+    stroke: #4fff00;
+    animation: beat 8s linear infinite;
+}
+
+@keyframes beat {
+
+    0% {
+        stroke-dasharray: 0 2000;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 2000 0;
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dasharray: 0 2000;
+        stroke-dashoffset: 2000;
+    }
+}
+
+#blur {
+    filter: blur(10px);
+}
